@@ -10,10 +10,10 @@ i: int = 1
 whole_beat: str = beat
 if repeat > 0:
     while i < repeat:
-      i = i + 1
-      whole_beat = whole_beat + " " + beat
+        i = i + 1
+        whole_beat = whole_beat + " " + beat
     print(whole_beat)
 else:
     print("No beat...")
-    
+
     
