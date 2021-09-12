@@ -16,4 +16,4 @@ else:
     if (integer % 2) != 0:
         print("CAROLINA")
 
-print (phrase)
+print(phrase)
