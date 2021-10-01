@@ -5,8 +5,11 @@ __author__ = "730410711"
 
 # TODO: Implement your functions here.
 def all(search: list[int], specific_number: int) -> bool:
+    """Determines if all the list values matches a specific integer."""
     i: int = 0
     length: int = len(search)
+    if length == 0:
+        return False
     while i < length:
         if search[i] == specific_number:
             i += 1
@@ -16,6 +19,7 @@ def all(search: list[int], specific_number: int) -> bool:
 
 
 def is_equal(list_one: list[int], list_two: list[int]) -> bool:
+    """Determines if two lists are exactly the same."""
     i: int = 0
     length_one: int = len(list_one)
     length_two: int = len(list_two)
@@ -31,6 +35,7 @@ def is_equal(list_one: list[int], list_two: list[int]) -> bool:
 
 
 def max(maximum_list: list[int]) -> int:
+    """Determines the maximum in a list of integers."""
     if len(maximum_list) == 0:
         raise ValueError("max() arg is an empty List")
     maximum: int = maximum_list[0]
