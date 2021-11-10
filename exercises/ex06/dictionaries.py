@@ -58,4 +58,3 @@ def count(list_counted: list[str]) -> dict[str, int]:
         else:
             counter[item] = 1
     return counter
-

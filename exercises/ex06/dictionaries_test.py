@@ -21,12 +21,12 @@ def test_invert_normal_one() -> None:
 
 def test_invert_normal_two() -> None:
     """Tests another normal use case of different strings."""
-    xs:dict[str, str] = {"123": "456", "789": "0", "345": "678"}
+    xs: dict[str, str] = {"123": "456", "789": "0", "345": "678"}
     assert invert(xs) == {"456": "123", "0": "789", "678": "345"}
 
 
 def test_favorite_color_empty_dictionary() -> None:
-    """Tests an empty dictionary"""
+    """Tests an empty dictionary."""
     xs: dict[str, str] = dict()
     assert favorite_color(xs) == "No Color"
 

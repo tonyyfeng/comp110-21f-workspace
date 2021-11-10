@@ -14,6 +14,6 @@ if (integer % 7) == 0:
     phrase = phrase + "HEELS"
 else:
     if (integer % 2) != 0:
-        print("CAROLINA")
+        phrase = "CAROLINA"
 
 print(phrase)

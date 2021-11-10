@@ -40,8 +40,6 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
 def head(table: dict[str, list[str]], row_number: int) -> dict[str, list[str]]:
     """Only select the first X rows of data from a CSV file."""
     header: dict[str, list[str]] = {}
-    if row_number > len(table):
-        row_number = len(table)
     i: int = 0
     for column in table:
         item: list[str] = []
@@ -84,3 +82,19 @@ def count(keys: list[str]) -> dict[str, int]:
         else:
             counted[key] = 1
     return counted
+
+
+def addition_interest(table: dict[str, list[str]], majors: list[str], number_of_major: int) -> float:
+    """Counts the average interest in the subject."""
+    i: int = 0
+    total_interest: int = 0
+    average_interest: float
+    for major in majors:
+        i = 0
+        while i < len(table["comp_major"]):
+            if table["comp_major"][i] == major:
+                total_interest += int(table["interesting"][i])
+            i += 1
+    average_interest = total_interest / number_of_major
+    return average_interest
+        
